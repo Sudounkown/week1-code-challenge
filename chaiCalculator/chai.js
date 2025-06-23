@@ -31,13 +31,11 @@ const calculateChaiIngredients = (numberOfCups) =>{
     )
     } else if (numberOfCups === 0){
         console.log("Cannot make 0 cups of coffee!")
-    }
-    
-    
+    }   
     else{
         console.log("Please enter a valid number!")
     }
-
+    
 
 }
 
