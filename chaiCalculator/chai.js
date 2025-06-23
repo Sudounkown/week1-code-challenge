@@ -8,9 +8,9 @@ let chai =
      sugar: 2,
     }
 
-let numberOfCups = Number(prompt("Karibu! How many cups of Chai Bora would you like to make? "));
+//let numberOfCups = Number(prompt("Karibu! How many cups of Chai Bora would you like to make? "));
 
-const calculateChaiIngredients = (numberOfCups) =>{
+const calculateChaiIngredients = (numberOfCups = Number(prompt("Karibu! How many cups of Chai Bora would you like to make? ", -1))) =>{
    
     let totalWater = (chai.water * numberOfCups)
     let totalMilk = (chai.milk * numberOfCups)
@@ -30,8 +30,9 @@ const calculateChaiIngredients = (numberOfCups) =>{
         
     )
     } else if (numberOfCups === 0){
-        console.log("Cannot make 0 cups of coffee!")
-    }   
+        console.log("Cannot make 0 cups of chai!")
+    }
+       
     else{
         console.log("Please enter a valid number!")
     }
@@ -39,7 +40,7 @@ const calculateChaiIngredients = (numberOfCups) =>{
 
 }
 
-calculateChaiIngredients(numberOfCups)
+calculateChaiIngredients()
 
 
 
