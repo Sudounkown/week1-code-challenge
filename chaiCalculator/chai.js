@@ -1,5 +1,7 @@
+//import prompt function
 const prompt = require('prompt-sync')();
 
+//declare and assign chai object
 let chai = 
     {
      water: 200,
@@ -8,15 +10,15 @@ let chai =
      sugar: 2,
     }
 
-//let numberOfCups = Number(prompt("Karibu! How many cups of Chai Bora would you like to make? "));
 
+//declare function and pass user input as argument
 const calculateChaiIngredients = (numberOfCups = Number(prompt("Karibu! How many cups of Chai Bora would you like to make? ", -1))) =>{
    
     let totalWater = (chai.water * numberOfCups)
     let totalMilk = (chai.milk * numberOfCups)
     let totalMajani = (chai.majani * numberOfCups)
     let totalSugar = (chai.sugar * numberOfCups)
-
+    //validate input
     if (numberOfCups > 0){
         console.log(
     `To make ${numberOfCups} cups of Kenyan Chai, you will need: 
@@ -39,7 +41,7 @@ const calculateChaiIngredients = (numberOfCups = Number(prompt("Karibu! How many
     
 
 }
-
+//function call
 calculateChaiIngredients()
 
 

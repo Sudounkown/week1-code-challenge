@@ -1,9 +1,12 @@
+//import prompt function
 const prompt = require('prompt-sync')();
+//declare function and pass user input as argument
 const calculateBodaFare = (distanceInKm = Number(prompt("Unafika wapi Mkubwa? Kilometer ngapi?:", -1)))=> {
     let baseFare = 50
     let chargePerKm = 15
     let subTotal = distanceInKm*chargePerKm
     let totalFare = baseFare + (distanceInKm*chargePerKm)
+    //Input Validation
     if(distanceInKm > 0){
     console.log(`
         Uko kwote? Hio ni ${distanceInKm} km:
@@ -22,4 +25,5 @@ const calculateBodaFare = (distanceInKm = Number(prompt("Unafika wapi Mkubwa? Ki
 
 
 }
+//function call
 calculateBodaFare()
